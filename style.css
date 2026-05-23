@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff7f2;
+    color: #4a2d2d;
+    min-height: 100vh;
+}
+
+.celular-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff7f2;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo-app {
+    background-color: #d95f76;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.topo-app h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.topo-app p {
+    font-size: 0.9rem;
+}
+
+.conteudo-app {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.tela-login,
+.tela-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.escondido {
+    display: none;
+}
+
+.tela-login {
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #f0d1c9;
+}
+
+h2 {
+    color: #4a2d2d;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+label {
+    color: #4a2d2d;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #d9b8b8;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.botao-principal {
+    background-color: #d95f76;
+    color: white;
+}
+
+.botao-secundario {
+    background-color: #f0c36a;
+    color: #4a2d2d;
+}
+
+.grupo-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.grupo-botoes button {
+    flex: 1;
+    font-size: 0.8rem;
+}
+
+.mensagem-erro {
+    min-height: 20px;
+    color: #b3261e;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.area-formulario {
+    background-color: #ffe7df;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.lista-receitas {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.item-receita {
+    background-color: white;
+    border: 1px solid #f0d1c9;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.nome-receita {
+    color: #4a2d2d;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.botoes-item {
+    display: flex;
+    gap: 8px;
+}
+
+.botao-editar {
+    background-color: #f0c36a;
+    color: #4a2d2d;
+    flex: 1;
+}
+
+.botao-remover {
+    background-color: #4a2d2d;
+    color: white;
+    flex: 1;
+}
+
+@media (max-width: 700px) {
+    .lista-receitas {
+        grid-template-columns: 1fr;
+    }
+
+    .grupo-botoes {
+        flex-direction: column;
+    }
+}

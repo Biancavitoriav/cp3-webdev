@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces da Bia</title>
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <div class="celular-container">
+
+        <header class="topo-app">
+            <h1><i class="bx bx-cake"></i> Receitinhas da Bia :)</h1>
+        </header>
+
+        <main class="conteudo-app">
+
+            <section id="tela-login" class="tela-login">
+                <h2><i class="bx bx-user"></i> Login</h2>
+
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" placeholder="Digite o usuário">
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite a senha">
+
+                <button id="botao-login" class="botao-principal">
+                    <i class="bx bx-log-in"></i>
+                    Entrar
+                </button>
+                <p id="mensagem-login" class="mensagem-erro"></p>
+            </section>
+
+            <section id="tela-lista" class="tela-lista escondido">
+                <h2><i class="bx bx-book-heart"></i> Listagem </h2>
+
+                <div class="area-formulario">
+                    <label for="nova-receita">Nome da receita</label>
+                    <input type="text" id="nova-receita" placeholder="Ex: Beijinho">
+
+                    <div class="grupo-botoes">
+                        <button id="botao-inicio" class="botao-secundario">
+                            <i class="bx bx-arrow-to-top"></i>
+                            Adicionar no início
+                        </button>
+                        <button id="botao-final" class="botao-principal">
+                            <i class="bx bx-plus"></i>
+                            Adicionar no final
+                        </button>
+                    </div>
+
+                    <p id="mensagem-receita" class="mensagem-erro"></p>
+                </div>
+
+                <ul id="lista-receitas" class="lista-receitas"></ul>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
