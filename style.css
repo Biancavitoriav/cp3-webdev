@@ -26,17 +26,27 @@ body {
     padding: 35px 20px;
 }
 
+.marca-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.gif {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
 .topo-app h1 {
     font-size: 2rem;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-}
-
-.topo-app p {
-    font-size: 0.9rem;
 }
 
 .conteudo-app {
@@ -104,6 +114,7 @@ button {
     justify-content: center;
     align-items: center;
     gap: 6px;
+    transition: 0.3s;
 }
 
 .botao-principal {
@@ -111,9 +122,17 @@ button {
     color: white;
 }
 
+.botao-principal:hover {
+    background-color: #c94b63;
+}
+
 .botao-secundario {
     background-color: #f0c36a;
     color: #4a2d2d;
+}
+
+.botao-secundario:hover {
+    background-color: #e0ae4f;
 }
 
 .grupo-botoes {
@@ -174,13 +193,51 @@ button {
     flex: 1;
 }
 
+.botao-editar:hover {
+    background-color: #e0ae4f;
+}
+
 .botao-remover {
     background-color: #4a2d2d;
     color: white;
     flex: 1;
 }
 
+.botao-remover:hover {
+    background-color: #2f1b1b;
+}
+
+.rodape-app {
+    background-color: #2b1d1d;
+    color: white;
+    text-align: center;
+    padding: 18px 15px;
+    font-size: 0.9rem;
+}
+
+.rodape-app p {
+    margin-bottom: 8px;
+}
+
+.rodape-app a {
+    color: #f0c36a;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.rodape-app a:hover {
+    color: white;
+}
+
 @media (max-width: 700px) {
+    .header-app {
+        flex-direction: column;
+    }
+
     .lista-receitas {
         grid-template-columns: 1fr;
     }

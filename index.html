@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doces da Bia</title>
+    <title>Receitinhas da Bia</title>
     <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
 </head>
 <body>
 
     <div class="celular-container">
 
         <header class="topo-app">
-            <h1><i class="bx bx-cake"></i> Receitinhas da Bia :)</h1>
+            <div class="header-app">
+                <img class="gif" src="https://i.pinimg.com/originals/13/22/60/1322609ad9b6a08e9807fead886c808d.gif" alt="Gif de bolinho">
+                <h1><i class="bx bx-cake"></i> Receitinhas da Bia</h1>
+            </div>
         </header>
 
         <main class="conteudo-app">
@@ -35,19 +37,19 @@
             </section>
 
             <section id="tela-lista" class="tela-lista escondido">
-                <h2><i class="bx bx-book-heart"></i> Listagem </h2>
+                <h2><i class="bx bx-book-heart"></i> Minhas receitas</h2>
 
                 <div class="area-formulario">
                     <label for="nova-receita">Nome da receita</label>
-                    <input type="text" id="nova-receita" placeholder="Ex: Beijinho">
+                    <input type="text" id="nova-receita" placeholder="Digite o nome da receita (ex: Beijinho)">
 
                     <div class="grupo-botoes">
                         <button id="botao-inicio" class="botao-secundario">
-                            <i class="bx bx-arrow-to-top"></i>
+                            <i class="bx bx-arrow-up"></i>
                             Adicionar no início
                         </button>
                         <button id="botao-final" class="botao-principal">
-                            <i class="bx bx-plus"></i>
+                            <i class="bx bx-arrow-down"></i>
                             Adicionar no final
                         </button>
                     </div>
@@ -59,7 +61,16 @@
             </section>
 
         </main>
+
+        <footer class="rodape-app">
+            <p>Bianca Veloso RM572036</p>
+            <a href="https://github.com/Biancavitoriav/cp3-webdev" target="_blank">
+                <i class="bx bx-github"></i>
+                cp3-webdev
+            </a>
+        </footer>
     </div>
 
+    <script src="./script.js"></script>
 </body>
 </html>

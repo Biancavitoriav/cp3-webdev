@@ -18,7 +18,7 @@ function fazerLogin() {
     const senha = campoSenha.value;
 
     if (usuario === "" || senha === "") {
-        mensagemLogin.innerText = "Preencha usuário e senha.";
+        mensagemLogin.innerText = "Preencha usuário e senha";
         return;
     }
 
@@ -28,7 +28,7 @@ function fazerLogin() {
         telaLista.classList.remove("escondido");
         mostrarReceitas();
     } else {
-        mensagemLogin.innerText = "Usuário ou senha incorretos.";
+        mensagemLogin.innerText = "Usuario ou senha incorretos";
     }
 }
 
@@ -51,7 +51,7 @@ function adicionarNoFinal() {
     const novaReceita = campoReceita.value;
 
     if (novaReceita === "") {
-        mensagemReceita.innerText = "Digite o nome da receita.";
+        mensagemReceita.innerText = "Digite o nome da receita";
         return;
     }
 
@@ -65,7 +65,7 @@ function adicionarNoInicio() {
     const novaReceita = campoReceita.value;
 
     if (novaReceita === "") {
-        mensagemReceita.innerText = "Digite o nome da receita.";
+        mensagemReceita.innerText = "Digite o nome da receita";
         return;
     }
 
@@ -79,7 +79,7 @@ function editarReceita(posicao) {
     const receitaEditada = prompt("Editar receita:", receitas[posicao]);
 
     if (receitaEditada === null || receitaEditada === "") {
-        mensagemReceita.innerText = "A receita original foi mantida.";
+        mensagemReceita.innerText = "A receita original foi mantida";
         return;
     }
 
@@ -98,10 +98,6 @@ function limparCampoReceita() {
     campoReceita.value = "";
 }
 
-function iniciarAplicacao() {
-    botaoLogin.addEventListener("click", fazerLogin);
-    botaoFinal.addEventListener("click", adicionarNoFinal);
-    botaoInicio.addEventListener("click", adicionarNoInicio);
-}
-
-iniciarAplicacao();
+botaoLogin.addEventListener("click", fazerLogin);
+botaoFinal.addEventListener("click", adicionarNoFinal);
+botaoInicio.addEventListener("click", adicionarNoInicio);
