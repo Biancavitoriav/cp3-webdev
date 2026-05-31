@@ -1,4 +1,4 @@
-const receitas = ["Brigadeiro", "Torta de morango", "Bolo de canela"];
+const receitas = ["Brigadeiro", "Bolo de cenoura", "Pudim"];
 
 const telaLogin = document.getElementById("tela-login");
 const telaLista = document.getElementById("tela-lista");
@@ -17,18 +17,22 @@ function fazerLogin() {
     const usuario = campoUsuario.value;
     const senha = campoSenha.value;
 
+    limparErrosLogin();
+
     if (usuario === "" || senha === "") {
-        mensagemLogin.innerText = "Preencha usuário e senha";
+        mensagemLogin.innerText = "Preencha usuário e senha.";
+        mostrarErroLogin();
         return;
     }
 
-    if (usuario == "aluno" && senha == "fiap2025") {
+    if (usuario === "aluno" && senha === "fiap2025") {
         mensagemLogin.innerText = "";
         telaLogin.classList.add("escondido");
         telaLista.classList.remove("escondido");
         mostrarReceitas();
     } else {
-        mensagemLogin.innerText = "Usuario ou senha incorretos";
+        mensagemLogin.innerText = "Usuário ou senha incorretos.";
+        mostrarErroLogin();
     }
 }
 
@@ -40,8 +44,8 @@ function mostrarReceitas() {
             "<li class='item-receita'>" +
                 "<span class='nome-receita'>" + (i + 1) + ". " + receitas[i] + "</span>" +
                 "<div class='botoes-item'>" +
-                    "<button class='botao-editar' onclick='editarReceita(" + i+ ")'><i class='bx bx-edit'></i> Editar</button>" +
-                    "<button class='botao-remover' onclick='removerReceita("+ i +")'><i class='bx bx-trash'></i> Remover</button>" +
+                    "<button class='botao-editar' onclick='editarReceita(" + i + ")'><i class='bx bx-edit'></i> Editar</button>" +
+                    "<button class='botao-remover' onclick='removerReceita(" + i + ")'><i class='bx bx-trash'></i> Remover</button>" +
                 "</div>" +
             "</li>";
     }
@@ -50,8 +54,11 @@ function mostrarReceitas() {
 function adicionarNoFinal() {
     const novaReceita = campoReceita.value;
 
+    limparErroReceita();
+
     if (novaReceita === "") {
-        mensagemReceita.innerText = "Digite o nome da receita";
+        mensagemReceita.innerText = "Digite o nome da receita.";
+        campoReceita.classList.add("campo-erro");
         return;
     }
 
@@ -64,8 +71,11 @@ function adicionarNoFinal() {
 function adicionarNoInicio() {
     const novaReceita = campoReceita.value;
 
+    limparErroReceita();
+
     if (novaReceita === "") {
-        mensagemReceita.innerText = "Digite o nome da receita";
+        mensagemReceita.innerText = "Digite o nome da receita.";
+        campoReceita.classList.add("campo-erro");
         return;
     }
 
@@ -79,7 +89,7 @@ function editarReceita(posicao) {
     const receitaEditada = prompt("Editar receita:", receitas[posicao]);
 
     if (receitaEditada === null || receitaEditada === "") {
-        mensagemReceita.innerText = "A receita original foi mantida";
+        mensagemReceita.innerText = "A receita original foi mantida.";
         return;
     }
 
@@ -98,6 +108,27 @@ function limparCampoReceita() {
     campoReceita.value = "";
 }
 
-botaoLogin.addEventListener("click", fazerLogin);
-botaoFinal.addEventListener("click", adicionarNoFinal);
-botaoInicio.addEventListener("click", adicionarNoInicio);
+function mostrarErroLogin() {
+    campoUsuario.classList.add("campo-erro");
+    campoSenha.classList.add("campo-erro");
+}
+
+function limparErrosLogin() {
+    campoUsuario.classList.remove("campo-erro");
+    campoSenha.classList.remove("campo-erro");
+}
+
+function limparErroReceita() {
+    campoReceita.classList.remove("campo-erro");
+}
+
+function iniciarAplicacao() {
+    botaoLogin.addEventListener("click", fazerLogin);
+    botaoFinal.addEventListener("click", adicionarNoFinal);
+    botaoInicio.addEventListener("click", adicionarNoInicio);
+    campoUsuario.addEventListener("input", limparErrosLogin);
+    campoSenha.addEventListener("input", limparErrosLogin);
+    campoReceita.addEventListener("input", limparErroReceita);
+}
+
+iniciarAplicacao();

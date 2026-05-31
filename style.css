@@ -104,6 +104,10 @@ input {
     background-color: white;
 }
 
+.campo-erro {
+    border: 2px solid #b3261e;
+}
+
 button {
     border: none;
     border-radius: 10px;
@@ -146,10 +150,8 @@ button {
 }
 
 .mensagem-erro {
-    min-height: 20px;
     color: #b3261e;
-    text-align: center;
-    margin-top: 12px;
+    margin-bottom: 8px;
     font-size: 0.9rem;
     font-weight: bold;
 }

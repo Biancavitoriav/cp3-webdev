@@ -29,11 +29,12 @@
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" placeholder="Digite a senha">
 
+                <p id="mensagem-login" class="mensagem-erro"></p>
+
                 <button id="botao-login" class="botao-principal">
                     <i class="bx bx-log-in"></i>
                     Entrar
                 </button>
-                <p id="mensagem-login" class="mensagem-erro"></p>
             </section>
 
             <section id="tela-lista" class="tela-lista escondido">
@@ -42,6 +43,7 @@
                 <div class="area-formulario">
                     <label for="nova-receita">Nome da receita</label>
                     <input type="text" id="nova-receita" placeholder="Digite o nome da receita (ex: Beijinho)">
+                    <p id="mensagem-receita" class="mensagem-erro"></p>
 
                     <div class="grupo-botoes">
                         <button id="botao-inicio" class="botao-secundario">
@@ -54,7 +56,6 @@
                         </button>
                     </div>
 
-                    <p id="mensagem-receita" class="mensagem-erro"></p>
                 </div>
 
                 <ul id="lista-receitas" class="lista-receitas"></ul>
